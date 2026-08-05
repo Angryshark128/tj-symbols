@@ -27,9 +27,6 @@ dependencies = [
     "tj-datamodel>=0.1,<0.2",
 ]
 
-[tool.uv.sources]
-tj-datamodel = { workspace = true }
-
 [project.scripts]
 tjsym = "tj_symbols.cli:main"
 
