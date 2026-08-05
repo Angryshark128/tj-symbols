@@ -1,5 +1,10 @@
 [English](README.en.md) | **中文**
 
+[![PyPI version](https://img.shields.io/pypi/v/tj-symbols?color=4b6ef5&label=pypi)](https://pypi.org/project/tj-symbols/)
+[![PyPI - Python](https://img.shields.io/pypi/pyversions/tj-symbols?color=4b6ef5)](https://pypi.org/project/tj-symbols/)
+[![CI](https://github.com/Angryshark128/tj-symbols/actions/workflows/ci.yml/badge.svg)](https://github.com/Angryshark128/tj-symbols/actions/workflows/ci.yml)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 # Tianji Symbols
 
 面向中国证券的代码识别、标准化与多格式转换工具。

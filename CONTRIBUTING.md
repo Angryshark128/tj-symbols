@@ -6,7 +6,7 @@
 
 ```bash
 # 克隆并进入项目
-git clone https://github.com/tianji-dev/tj-symbols.git
+git clone https://github.com/Angryshark128/tj-symbols.git
 cd tj-symbols
 
 # 安装依赖（含 dev 组：ruff / pyright / pytest）

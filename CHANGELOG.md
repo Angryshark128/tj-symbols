@@ -19,5 +19,5 @@
 - 复用 `tj-datamodel` 的 `Symbol` / `Exchange` / `Market` / `AssetType`。
 - 离线优先，零外部数据依赖。
 
-[Unreleased]: https://github.com/tianji-dev/tj-symbols/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/tianji-dev/tj-symbols/releases/tag/v0.1.0
+[Unreleased]: https://github.com/Angryshark128/tj-symbols/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/Angryshark128/tj-symbols/releases/tag/v0.1.0
