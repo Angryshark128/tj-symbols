@@ -18,6 +18,12 @@ commonly used by Tushare, Sina, Eastmoney, JQData, BaoStock, and Tianji itself.
 - Output case control (`is_lower`)
 - Offline-first, zero external data dependency
 
+## Documentation
+
+- [API reference](docs/api.md) — convert / normalize / parse / detect / format registry / CLI
+- [Data format](docs/data-format.md) — data versioning and load priority
+- [Design doc](docs/design.md) — positioning and design constraints
+
 ## Install
 
 ```bash

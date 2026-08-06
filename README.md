@@ -21,6 +21,12 @@ Tianji Symbols 是 [Tianji](https://github.com/tianji-dev/tianji) 开源市场�
 - 输出大小写控制（`is_lower`）
 - 离线优先，零外部数据依赖
 
+## 文档
+
+- [API 参考](docs/api.md) — 转换/标准化/解析/检测/格式注册表与 CLI
+- [数据格式](docs/data-format.md) — 数据版本与加载优先级
+- [设计文档](docs/design.md) — 生态定位与设计约束
+
 ## 安装
 
 ```bash
