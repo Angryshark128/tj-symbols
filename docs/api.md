@@ -35,16 +35,16 @@ pip install tj-symbols
 ```python
 from tj_symbols import convert, normalize, parse_symbol
 
-convert("SH600519", to="tianji")       # "600519.SH"
-convert("600519.SH", to="sina")        # "sh600519"
-convert("000001.SZ", to="eastmoney")   # "0.000001"
+convert("SH600519", to="tianji")  # "600519.SH"
+convert("600519.SH", to="sina")  # "sh600519"
+convert("000001.SZ", to="eastmoney")  # "0.000001"
 
-normalize("sh600519")                  # "600519.SH"
-normalize("000001", exchange="SSE")    # "000001.SH"（裸码消歧）
+normalize("sh600519")  # "600519.SH"
+normalize("000001", exchange="SSE")  # "000001.SH"（裸码消歧）
 
 result = parse_symbol("600519.SH")
-result.normalized                      # "600519.SH"
-result.source_format                   # "tianji"
+result.normalized  # "600519.SH"
+result.source_format  # "tianji"
 ```
 
 ## 核心函数
@@ -69,11 +69,11 @@ def convert(
 - `is_lower`：控制输出字母大小写；`None` 使用格式默认（sina/baostock 默认小写，其余大写）。只影响字母，数字不受影响。
 
 ```python
-convert("600519", to="tianji")             # 默认深市推断 → "600519.SH"
-convert("600519", to="tianji", exchange="SSE")      # "600519.SH"
-convert("000001", to="tianji", exchange="SSE")      # "000001.SH"
+convert("600519", to="tianji")  # 默认深市推断 → "600519.SH"
+convert("600519", to="tianji", exchange="SSE")  # "600519.SH"
+convert("000001", to="tianji", exchange="SSE")  # "000001.SH"
 convert("000001", to="tianji", asset_type="index")  # "000001.SH"（上证指数）
-convert("600519.SH", to="sina", is_lower=False)     # "SH600519"
+convert("600519.SH", to="sina", is_lower=False)  # "SH600519"
 ```
 
 ### normalize
@@ -85,8 +85,8 @@ def normalize(symbol: str, exchange=None, asset_type=None) -> str
 将 `symbol` 标准化为 Tianji 标准格式 `<code>.<suffix>`。等价于 `convert(symbol, to="tianji")`。
 
 ```python
-normalize("SH600519")        # "600519.SH"
-normalize("000001.SZ")       # "000001.SZ"
+normalize("SH600519")  # "600519.SH"
+normalize("000001.SZ")  # "000001.SZ"
 ```
 
 ### parse_symbol
@@ -109,10 +109,10 @@ def parse_symbol(
 from tj_symbols import parse_symbol
 
 r = parse_symbol("SH600519")
-r.symbol.code           # "600519"
-r.symbol.exchange.value # "SSE"
-r.symbol.asset_type     # AssetType.STOCK
-r.source_format         # "prefix"
+r.symbol.code  # "600519"
+r.symbol.exchange.value  # "SSE"
+r.symbol.asset_type  # AssetType.STOCK
+r.source_format  # "prefix"
 ```
 
 ### format_symbol
@@ -142,9 +142,9 @@ def detect_format(text: str) -> str
 ```python
 from tj_symbols import detect_format
 
-detect_format("SH600519")    # "prefix"
-detect_format("sh.600519")   # "baostock"
-detect_format("600519.XSHG") # "jqdata"
+detect_format("SH600519")  # "prefix"
+detect_format("sh.600519")  # "baostock"
+detect_format("600519.XSHG")  # "jqdata"
 ```
 
 ### detect_exchange
@@ -158,8 +158,8 @@ def detect_exchange(text: str) -> str
 ```python
 from tj_symbols import detect_exchange
 
-detect_exchange("600519.SH")   # "SSE"
-detect_exchange("000001")      # "SZSE"
+detect_exchange("600519.SH")  # "SSE"
+detect_exchange("000001")  # "SZSE"
 ```
 
 ### detect_asset_type
@@ -209,9 +209,9 @@ list_formats()
 # ["tianji", "tushare", "prefix", "sina", "eastmoney", "jqdata", "baostock", "plain"]
 
 info = get_format_info("eastmoney")
-info.exchanges       # ("SSE", "SZSE")
-info.lossy           # False
-info.example         # "1.600519"
+info.exchanges  # ("SSE", "SZSE")
+info.lossy  # False
+info.example  # "1.600519"
 ```
 
 ## 支持的格式
@@ -247,7 +247,7 @@ info.example         # "1.600519"
 from tj_symbols import parse_symbol
 
 r = parse_symbol("sh600519")
-r.source_format   # "sina"
+r.source_format  # "sina"
 r.format("tianji")  # "600519.SH"
 r.format("baostock")  # "sh.600519"
 ```
